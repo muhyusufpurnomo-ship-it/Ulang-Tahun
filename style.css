@@ -1,0 +1,555 @@
+/* =========================
+   RESET & GLOBAL STYLE
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #ff4d6d);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* =========================
+   BACKGROUND HEARTS
+========================= */
+
+#hearts {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* =========================
+   OPENING SECTION
+========================= */
+
+.opening {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.opening .overlay {
+    background: rgba(0,0,0,0.4);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.opening h1 {
+    font-size: 60px;
+    color: #ff4d6d;
+    font-family: 'Great Vibes', cursive;
+}
+
+.opening h2 {
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+.opening h3 {
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+.opening p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* BUTTON OPEN */
+
+#openBtn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background: #ff4d6d;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+#openBtn:hover {
+    background: #ff2e63;
+    transform: scale(1.05);
+}
+
+/* =========================
+   CONTENT AREA
+========================= */
+
+#content {
+    display: none;
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.hero .age {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero-photo {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid #ff4d6d;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   COUNTDOWN SECTION
+========================= */
+
+.countdown {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.countdown h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #ff4d6d;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.timer .box {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 15px;
+    width: 90px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.timer .box span {
+    font-size: 28px;
+    font-weight: bold;
+    display: block;
+}
+
+.timer .box p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* =========================
+   GALLERY SLIDER
+========================= */
+
+.gallery {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #ff4d6d;
+}
+
+.slider {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* =========================
+   LETTER SECTION
+========================= */
+
+.letter {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.letter h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ff4d6d;
+}
+
+.card {
+    max-width: 700px;
+    margin: auto;
+    background: rgba(255,255,255,0.08);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    text-align: left;
+    line-height: 1.8;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* =========================
+   QUOTES SECTION
+========================= */
+
+.quotes {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.quotes h2 {
+    font-size: 22px;
+    font-style: italic;
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+/* =========================
+   MUSIC SECTION
+========================= */
+
+.music {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.music h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ff4d6d;
+}
+
+.music button {
+    padding: 12px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+#playMusic {
+    background: #ff4d6d;
+    color: white;
+}
+
+#pauseMusic {
+    background: #222;
+    color: white;
+}
+
+.music button:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(0,0,0,0.3);
+    margin-top: 50px;
+}
+
+footer h2 {
+    font-size: 26px;
+    color: #ff4d6d;
+}
+
+footer p {
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+/* =========================
+   RESPONSIVE (HP)
+========================= */
+
+@media (max-width: 768px) {
+
+    .opening h1 {
+        font-size: 40px;
+    }
+
+    .opening h2 {
+        font-size: 28px;
+    }
+
+    .hero-photo {
+        width: 200px;
+        height: 200px;
+    }
+
+    .timer .box {
+        width: 70px;
+        padding: 15px;
+    }
+
+    .slider {
+        width: 260px;
+        height: 340px;
+    }
+
+    .card {
+        padding: 20px;
+        font-size: 14px;
+    }
+}
+
+/* =========================
+   HEART ANIMATION
+========================= */
+
+.heart {
+    position: fixed;
+    top: -10px;
+    font-size: 20px;
+    color: #ff4d6d;
+    animation: fall linear infinite;
+    z-index: 1;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+    }
+}
+
+/* =========================
+   EXTRA EFFECTS
+========================= */
+
+button {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* smooth fade global */
+section {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* =========================
+   CINEMATIC VIDEO BACKGROUND
+========================= */
+
+#bgVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.video-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    z-index: -1;
+}
+
+/* =========================
+   MOBILE & IOS RESPONSIVE FIX
+========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .opening h1 {
+        font-size: 32px;
+    }
+
+    .opening h2 {
+        font-size: 22px;
+    }
+
+    .hero-photo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .slider {
+        width: 240px;
+        height: 320px;
+    }
+
+    .timer .box {
+        width: 65px;
+        padding: 12px;
+    }
+}
+
+/* iPhone safe area fix */
+body {
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-top: env(safe-area-inset-top);
+}
+
+/* =========================
+   LOCK SCREEN STYLE
+========================= */
+
+#lockScreen {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.lockBox {
+    background: rgba(255,255,255,0.1);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    width: 300px;
+    color: white;
+}
+
+.lockBox h2 {
+    margin-bottom: 10px;
+    color: #ff4d6d;
+}
+
+.lockBox input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    text-align: center;
+}
+
+.lockBox button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #ff4d6d;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.lockBox button:hover {
+    background: #ff2e63;
+}
+
+#errorMsg {
+    margin-top: 10px;
+    color: yellow;
+    font-size: 14px;
+}
+
+/* =========================
+   SHAKE EFFECT (PASSWORD SALAH)
+========================= */
+
+@keyframes shake {
+    0% { transform: translate(0,0); }
+    25% { transform: translate(-5px,0); }
+    50% { transform: translate(5px,0); }
+    75% { transform: translate(-5px,0); }
+    100% { transform: translate(0,0); }
+}
+
+.lockBox.shake {
+    animation: shake 0.4s;
+}
+
+/* =========================
+   GLITCH TEXT ERROR
+========================= */
+
+#errorMsg {
+    margin-top: 10px;
+    color: #ffcc00;
+    font-size: 14px;
+    text-shadow: 0 0 5px red;
+    animation: glitch 0.5s infinite;
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    25% { transform: translate(1px,-1px); }
+    50% { transform: translate(-1px,1px); }
+    75% { transform: translate(1px,1px); }
+    100% { transform: translate(0); }
+}
